@@ -99,11 +99,18 @@ function doesWordExist(arrayOfWords, word) {
     if (arrayOfWords.length === 0) {
         return null
     }
-    for ( let i = 0; i < arrayOfWords.length; i++) {
-        if (arrayOfWords[i] === word){
-            return true
-        }
-    }
-   return false
+    // for ( let i = 0; i < arrayOfWords.length; i++) {
+    //     if (arrayOfWords[i] === word){
+    //         return true
+    //     }
+    // }
+    let wordFound = false
+    arrayOfWords.forEach (function (eachWord){
+        if (eachWord === word){
+            wordFound = true
+     }  
+    })
+
+   return wordFound
 }
 
